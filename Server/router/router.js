@@ -7,7 +7,10 @@ Router.get('/', async (req, res) => {
     res.send(result)
 
 })
-
+Router.get('/admin/product', async (req, res) => {
+    let result = await productSchema.find()
+    res.send(result)
+})
 
 
 //signup && login
@@ -32,8 +35,8 @@ Router.post('/admin/signup', async (req, res) => {
         res.json({ "error": "fill all details" })
     }
 })
-
-Router.post('/admin/login', async (req, res) => {
+Router.post('/admin', async (req, res) => {
+    
     const { email, password } = req.body;
     if (email && password) {
         let result = await userSchema.findOne(req.body)
@@ -41,12 +44,15 @@ Router.post('/admin/login', async (req, res) => {
             res.send(result)
 
         } else {
-            res.send({ "Error": "Data not found" })
+            console.log({ "Error": "Data not found" })
+          
         }
     } else {
         res.send({ "error": "fill Both field" })
     }
+
 })
+
 
 
 //product
@@ -69,7 +75,7 @@ Router.post('/admin/addProduct', async (req, res) => {
     }
 
 })
-Router.delete('/admin/delete/:id', async (req, res) => {
+Router.delete('/admin/product/:id', async (req, res) => {
     let result = await productSchema.deleteOne({ _id: req.params.id })
     res.send(result)
 })
@@ -77,9 +83,9 @@ Router.put('/admin/updateProduct/:id', async (req, res) => {
     let result = await productSchema.updateOne({ _id: req.params.id }, { $set: req.body })
     res.send(result)
 })
-Router.get('/admin', async (req, res) => {
-    let result = await productSchema.find()
+Router.get('/admin/updateProduct/:id', async (req, res) => {
+    let result = await productSchema.findOne({ _id: req.params.id })
     res.send(result)
-
 })
+
 module.exports = Router;
