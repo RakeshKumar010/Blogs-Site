@@ -22,8 +22,40 @@
     border: 5px solid white;
     color: wheat;
 }
+.inner2Div{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.sideBar{
+    background-color: lightslategrey;
+    height: 90vh;
+    color: aliceblue;
+    border: 2px solid black;
+    float: left;
+    width: 20vw;
+}
+.sideBar p{
+    font-size: large;
+    margin: 1rem;
+}
+.sideBar p:hover{
+    background-color: rgba(34, 32, 32, 0.596);
+    border-radius:0 30px 30px 0;
+}
+.headerDiv{
+
+    
+   
+    display: flex;
+   
+    justify-content: center;
+    text-align: center;
+  
+}
 .homeDiv{
-    margin: 3rem;
+    margin-top: 3rem;
+    float: right;
+    width: 78vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -31,15 +63,20 @@
 }
 .innerDiv{
     border: 1px solid black;
-    width: 40vw;
-    
-    height: 18vh;
+    width: 30vw;
+    padding:  2rem;
+    min-height: 18vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     background-color: lightslategrey;
+    border-radius: 100px;
+    box-shadow: 10px 10px 8px black;
 
+}
+.innerDiv h1{
+    color: aliceblue;
 }
 .loginDiv{
     display: flex;

@@ -7,6 +7,11 @@ Router.get('/', async (req, res) => {
     res.send(result)
 
 })
+Router.get('/header/:id', async (req, res) => {
+    let result = await productSchema.findOne({_id:req.params.id})
+    res.send(result)
+
+})
 Router.get('/admin/product', async (req, res) => {
     let result = await productSchema.find()
     res.send(result)

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import {Link} from 'react-router-dom'
 
 const Home = () => {
     const [val, setVal] = useState()
@@ -16,8 +16,20 @@ const Home = () => {
         setVal(result)
 
     }
-    return (
-
+    return (<>
+        <div className="sideBar">
+        {
+            val && val.map((value)=>{
+                return(
+                    <Link to={`/header/${value._id}`} className='inner2Div' key={value._id}>
+                        
+                        <p>{value.header}</p>
+                 
+                    </Link>
+                )
+            })
+        }
+        </div>
         <div className='homeDiv' >
     
         {
@@ -26,14 +38,14 @@ const Home = () => {
                     <div className='innerDiv' key={value._id}>
                         <h1>{value.header}</h1>
                         <p>{value.content}</p>
-                        <button>Read More</button>
+                 
                     </div>
                 )
             })
         }
          </div>
 
-
+         </>
     )
 }
 
