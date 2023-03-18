@@ -17,7 +17,15 @@ Router.get('/admin/product', async (req, res) => {
     res.send(result)
 })
 
-
+Router.get('/search/:key',async(req,res)=>{
+    let result= await productSchema.find({
+        "$or":[
+            {topic:{$regex:req.params.key}},
+            {header:{$regex:req.params.key}},
+        ]
+    })
+    res.send(result)
+})
 //signup && login
 Router.post('/admin/signup', async (req, res) => {
     const { name, email, password, cpassword } = req.body;

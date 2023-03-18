@@ -32,7 +32,7 @@ const Product = () => {
     }
     return (
 
-        <div className='homeDiv' >
+        <div className='productDiv' >
     
         {
             val && val.map((value)=>{
