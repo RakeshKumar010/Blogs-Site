@@ -9,6 +9,7 @@ Router.get('/', async (req, res) => {
 })
 Router.get('/header/:id', async (req, res) => {
     let result = await productSchema.findOne({_id:req.params.id})
+   
     res.send(result)
 
 })

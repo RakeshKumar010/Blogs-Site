@@ -9,6 +9,7 @@
     display: flex;
     gap: 2rem;
     list-style-type: none;
+    flex-wrap: wrap;
     background-color: lightslategrey;
     justify-content: flex-end;
     padding: 2rem;
@@ -34,22 +35,25 @@
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
-#navLine{
-    
+
+#navLine {
+
     display: none;
     border: 2px solid wheat;
 }
-#navCrose{
-    
+
+#navCrose {
+
     display: none;
     border: 2px solid wheat;
 }
-.secondDiv{
+
+.secondDiv {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     color: white;
     align-items: center;
-    padding: 5px;
+    padding: 5px 2rem;
     background-color: rgb(24, 24, 24);
 }
 
@@ -58,7 +62,7 @@
     height: fit-content;
     border-radius: 0 0 20px 0;
     float: left;
-    width:20vw;
+    width: 20vw;
 }
 
 .sideBar p {
@@ -85,10 +89,10 @@
 }
 
 .search-input {
-    
+
     padding: 10px;
- 
-   right: 0;
+
+    right: 0;
     border: 2px solid;
     color: black;
     box-shadow: 1px 1px 8px black;
@@ -256,24 +260,52 @@
 }
 
 @media screen and (max-width: 1160px) {
-    .sideBar{
+    .sideBar {
         display: none;
         overflow: hidden auto;
         position: absolute;
-        width: 27vw;
+        width: 37vw;
         height: 50vh;
-    box-shadow: 1px 1px 8px black inset;
+        box-shadow: 1px 1px 8px black inset;
 
-        background-color: rgba(105, 149, 177, 0.479);
+        background-color: rgba(105, 149, 177, 0.877);
     }
-    .homeDiv{
+
+    .homeDiv {
         width: 100vw;
     }
-    .innerDiv{
+
+    .innerDiv {
         width: 98%;
     }
-    #navLine{
+
+    #navLine {
         display: block;
     }
+
+    .paraTopic {
+        display: none;
+    }
+
+    
    
-  }
+
+
+}
+
+@media screen and (max-width: 540px) {
+    .navUl a,
+    .logoutBtn {
+        font-size: small;
+    }
+    .logo{
+        left: 1rem;
+        width: 3rem;
+    }
+    .loginForm{
+        width: 90vw;
+    }
+    .sideBar{
+        width: 100vw;
+    }
+}
