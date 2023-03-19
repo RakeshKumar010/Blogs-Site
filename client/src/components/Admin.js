@@ -42,8 +42,8 @@ const Admin = () => {
                 <div>
 
                 
-            <button>Login</button>
-            <Link to='/admin/signup'>SignUp</Link>
+            <button>LogIn</button>
+            <Link to='/admin/signup' className='signUplink'>SignUp</Link>
             </div>
             </form>
         </div>

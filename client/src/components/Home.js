@@ -1,9 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import ViewHeadlineIcon from '@mui/icons-material/ViewHeadline';
+import CloseIcon from '@mui/icons-material/Close';
 const Home = () => {
     const [val, setVal] = useState()
     const [headerval, setHeaderval] = useState()
+    const navLineFun = () =>{
+        const navCrose = document.getElementById('navCrose')
+        const navLine = document.getElementById('navLine')
+        const sideBarId = document.getElementById('sideBarId')
+        navLine.style.display="none"
+        navCrose.style.display="block"
+        sideBarId.style.display="block"
+    }
+    const navCroseFun = () =>{
+        const navCrose = document.getElementById('navCrose')
+        const navLine = document.getElementById('navLine')
+        const sideBarId = document.getElementById('sideBarId')
+        navCrose.style.display="none"
+        navLine.style.display="block"
+        sideBarId.style.display="none"
+    }
+    
     useEffect(() => {
         getFun()
     }, [])
@@ -28,8 +46,22 @@ const Home = () => {
         result = await result.json()
         setVal(result)
     }
+    
     return (<>
-        <div className="sideBar">
+     <div className="secondDiv">
+        <div>
+                <ViewHeadlineIcon id='navLine' onClick={navLineFun}/>
+                <CloseIcon id='navCrose' onClick={navCroseFun}/>
+                </div>
+               {headerval && headerval.map((valHead)=>{
+                return(<>
+                <p>{valHead.topic}</p>
+               
+                </>)
+               })}
+               <input type="text" placeholder='Search...' className='search-input' onChange={searchFun} />
+               </div>
+        <div className="sideBar" id='sideBarId'>
             {
                 headerval && headerval.map((value) => {
                     return (
@@ -43,8 +75,7 @@ const Home = () => {
             }
         </div>
         <div>
-
-            <input type="text" placeholder='Search...' className='search-input' onChange={searchFun} />
+           
 
 
             <div className='homeDiv' >
@@ -66,5 +97,6 @@ const Home = () => {
     </>
     )
 }
+
 
 export default Home

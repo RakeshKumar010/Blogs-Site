@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import logoImg from '../assets/aave-aave-logo.png'
 const Nav = () => {
   const navigate = useNavigate()
     let data = localStorage.getItem('users')
@@ -12,6 +13,7 @@ const logoutFun=()=>{
 
     <div className='navDiv'>
         <ul className='navUl'>
+            <img src={logoImg} alt="logo" className='logo'/>
             {!data?<><li><Link to='/'>Home</Link></li>
             <li><Link to='/about'>About</Link></li>
             <li><Link to='/admin'>Admin</Link></li>
@@ -19,7 +21,7 @@ const logoutFun=()=>{
             <>
            
             <li><Link to='/admin/product'>Product</Link></li>
-            <li><Link to='/admin/addProduct'>addProduct</Link></li>
+            <li><Link to='/admin/addProduct'>Add Product</Link></li>
             <li className='logoutBtn' onClick={logoutFun}>Logout ({data.name} )</li>
             </>
             }

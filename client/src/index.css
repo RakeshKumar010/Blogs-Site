@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navUl {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    background-color: lightslategrey;
+    justify-content: flex-end;
+    padding: 2rem;
+    align-items: center;
+}
+
+.navUl a,
+.logoutBtn {
+    text-decoration: none;
+    padding: 10px;
+
+
+
+    border: 2px solid white;
+    color: wheat;
+
+    background-color: rgb(53, 121, 164);
+    box-shadow: 1px 1px 8px black inset;
+    border-radius: 100px;
+}
+
+.inner2Div {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+#navLine{
+    
+    display: none;
+    border: 2px solid wheat;
+}
+#navCrose{
+    
+    display: none;
+    border: 2px solid wheat;
+}
+.secondDiv{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(24, 24, 24);
+}
+
+.sideBar {
+    background-color: rgb(175, 188, 196);
+    height: fit-content;
+    border-radius: 0 0 20px 0;
+    float: left;
+    width:20vw;
+}
+
+.sideBar p {
+    /* font-size: 1.5vw; */
+    color: rgb(0, 0, 0);
+
+    margin: 1rem;
+}
+
+.sideBar p:hover {
+    background-color: rgba(34, 32, 32, 0.596);
+    border-radius: 0 30px 30px 0;
+}
+
+.headerDiv {
+
+
+
+    display: flex;
+
+    justify-content: center;
+    text-align: center;
+
+}
+
+.search-input {
+    
+    padding: 10px;
+ 
+   right: 0;
+    border: 2px solid;
+    color: black;
+    box-shadow: 1px 1px 8px black;
+    border-radius: 10px;
+}
+
+.productDiv {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.homeDiv {
+    margin-top: 1rem;
+    float: right;
+    width: 75vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.headerinnerDiv {
+    margin: 2rem;
+    width: 90vw;
+    box-shadow: 1px 1px 15px black;
+    border: 2px solid white;
+
+
+    min-height: 1vh;
+
+
+
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: lightslategrey;
+    border-radius: 10px;
+
+}
+
+.innerDiv {
+    box-shadow: 1px 1px 15px black;
+    border: 2px solid white;
+
+    width: 75vw;
+    min-height: 1vh;
+
+
+
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: lightslategrey;
+    border-radius: 10px;
+
+
+}
+
+.innerDiv h1 {
+    color: aliceblue;
+}
+
+.loginDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+
+
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    background-color: lightslategrey;
+    border: 3px solid rgb(9, 60, 77);
+    justify-content: center;
+    box-shadow: 1px 1px 8px black;
+
+    align-items: center;
+    gap: 1rem;
+    height: 60vh;
+    width: 60vw;
+    border-radius: 20px;
+}
+
+.loginForm input,
+.loginForm textarea {
+    width: 70%;
+    background-color: rgb(9, 60, 77);
+    box-shadow: 1px 1px 8px black;
+    border: 3px solid rgb(9, 60, 77);
+    padding: 1vh;
+
+}
+
+.loginForm div {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm button {
+    background-color: rgb(9, 60, 77);
+    color: aliceblue;
+    border: 3px solid rgb(9, 60, 77);
+    padding: 5px 1rem;
+    box-shadow: 1px 1px 8px black;
+
+    font-size: medium;
+
+}
+
+.signUplink {
+    background-color: rgb(9, 60, 77);
+    color: aliceblue;
+    border: 3px solid rgb(9, 60, 77);
+    padding: 5px 1rem;
+    box-shadow: 1px 1px 8px black;
+    text-decoration: none;
+
+
+
+}
+
+.logo {
+    position: absolute;
+    left: 3rem;
+    border: 5px solid blanchedalmond;
+    box-shadow: 1px 1px 8px black;
+    border-radius: 100px;
+    width: 3.5rem;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-around;
+
+    width: 10vw;
+}
+
+.icon a {
+    /* text-decoration: none; */
+    color: rgb(24, 23, 23);
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(53, 121, 164);
+    box-shadow: 1px 1px 8px black inset;
+    border-radius: 100px;
+}
+
+@media screen and (max-width: 1160px) {
+    .sideBar{
+        display: none;
+        overflow: hidden auto;
+        position: absolute;
+        width: 27vw;
+        height: 50vh;
+    box-shadow: 1px 1px 8px black inset;
+
+        background-color: rgba(105, 149, 177, 0.479);
+    }
+    .homeDiv{
+        width: 100vw;
+    }
+    .innerDiv{
+        width: 98%;
+    }
+    #navLine{
+        display: block;
+    }
+   
+  }
