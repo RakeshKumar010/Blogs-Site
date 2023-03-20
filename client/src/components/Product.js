@@ -41,9 +41,9 @@ const Product = () => {
                         <h1>{value.header}</h1>
                         <p>{value.content}</p>
                         <div className='icon'>
-                        <HighlightOffOutlinedIcon className='icon1' onClick={() => clickFun(value._id)} />
+                        <HighlightOffOutlinedIcon className='icon2link' onClick={() => clickFun(value._id)} />
                         <Link to={`/admin/updateProduct/${value._id}`} className='icon2link'>
-                        <DriveFileRenameOutlineOutlinedIcon className='icon2'  />
+                        <DriveFileRenameOutlineOutlinedIcon className='icon2 '  />
                         </Link>
                         </div>
                     </div>

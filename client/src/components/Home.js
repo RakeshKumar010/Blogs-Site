@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import ViewHeadlineIcon from '@mui/icons-material/ViewHeadline';
+
 import CloseIcon from '@mui/icons-material/Close';
 const Home = () => {
     const [val, setVal] = useState()
@@ -39,7 +40,7 @@ const Home = () => {
         //newarr
 
         const uniqueArray = result.reduce((accumulator, current) => {
-            const duplicate = accumulator.find(item => item.topic === current.topic);
+            const duplicate = accumulator.find(item => item.topic == current.topic);
             if (!duplicate) {
                 return [...accumulator, current];
             }
@@ -99,11 +100,14 @@ const Home = () => {
                 {
                     val && val.map((value) => {
                         return (
+                            <Link to={`/header/${value._id}`} className='inner2Div' key={value._id}>
                             <div className='innerDiv' key={value._id}>
+
                                 <h1>{value.header}</h1>
-                                <p>{value.content}</p>
+                                <p className='homePara'>{value.content}</p>
 
                             </div>
+                            </Link>
                         )
                     })
                 }

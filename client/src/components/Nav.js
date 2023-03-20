@@ -13,7 +13,8 @@ const logoutFun=()=>{
 
     <div className='navDiv'>
         <ul className='navUl'>
-            <img src={logoImg} alt="logo" className='logo'/>
+        <Link to='/' id='linkLogo'><img to='/' src={logoImg} alt="logo" className='logo'/></Link>
+            
             {!data?<><li><Link to='/'>Home</Link></li>
             <li><Link to='/about'>About</Link></li>
             <li><Link to='/admin'>Admin</Link></li>

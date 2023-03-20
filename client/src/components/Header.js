@@ -21,7 +21,7 @@ const Header = () => {
     }, [])
     return (
         <div className='headerDiv'>
-            <div className='headerinnerDiv' >
+            <div className='headerinnerDiv innerDiv' >
                 <h1>{header}</h1>
                 <p>{content}</p>
             </div>

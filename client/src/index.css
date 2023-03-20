@@ -10,10 +10,13 @@
     gap: 2rem;
     list-style-type: none;
     flex-wrap: wrap;
-    background-color: lightslategrey;
+    /* background-color: lightslategrey; */
     justify-content: flex-end;
     padding: 2rem;
     align-items: center;
+
+    background: rgb(152,10,144);
+background: linear-gradient(229deg, rgb(187, 96, 182) 39%, lightslategrey 100%);
 }
 
 .navUl a,
@@ -30,10 +33,22 @@
     box-shadow: 1px 1px 8px black inset;
     border-radius: 100px;
 }
+a:hover{
+    background-color: green;
+}
+.logoutBtn:hover{
+    background-color: rgb(182, 12, 12);
+}
+.loginForm button:hover{
+    background-color: green
+}
 
 .inner2Div {
     color: rgb(255, 255, 255);
     text-decoration: none;
+}
+.inner2Div:hover{
+    background-color: transparent;
 }
 
 #navLine {
@@ -58,16 +73,23 @@
 }
 
 .sideBar {
-    background-color: rgb(175, 188, 196);
+    background-color: lightslategrey;
+
     height: fit-content;
     border-radius: 0 0 20px 0;
     float: left;
     width: 20vw;
+
+    border: 2px solid white;
+    border-top: 0px;
+    border-left: 0px;
+    box-shadow: 1px 1px 8px black;
 }
 
 .sideBar p {
     /* font-size: 1.5vw; */
-    color: rgb(0, 0, 0);
+    color: white;
+
 
     margin: 1rem;
 }
@@ -112,7 +134,7 @@
     float: right;
     width: 75vw;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: center;
     gap: 3rem;
 }
@@ -162,7 +184,13 @@
 
 .innerDiv h1 {
     color: aliceblue;
+    text-shadow: 1px 1px 8px black;
 }
+.homePara {
+    height: 2rem;
+    overflow: hidden;
+}
+
 
 .loginDiv {
     display: flex;
@@ -229,21 +257,34 @@
 }
 
 .logo {
-    position: absolute;
-    left: 3rem;
+    
     border: 5px solid blanchedalmond;
     box-shadow: 1px 1px 8px black;
     border-radius: 100px;
     width: 3.5rem;
 }
+#linkLogo{
+    position: absolute;
+    left: 3rem;
+    width:60px;
+    height: 60px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 8px black;
 
+}
 .icon {
     display: flex;
     justify-content: space-around;
 
     width: 10vw;
 }
-
+.icon2link:hover{
+    background-color:transparent;
+    color: greenyellow;
+}
 .icon a {
     /* text-decoration: none; */
     color: rgb(24, 23, 23);
