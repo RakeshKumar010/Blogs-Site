@@ -10,7 +10,7 @@ const Product = () => {
         getData()
     }, [])
     const getData = async () => {
-        let result = await fetch('http://localhost:5000/admin/product', {
+        let result = await fetch('https://blogs-site-f4ki.onrender.com/admin/product', {
             method: 'get',
             headers: { 'content-type': 'application/json' }
 
@@ -20,7 +20,7 @@ const Product = () => {
 
     }
     const clickFun = async (id) => {
-        let result = await fetch(`http://localhost:5000/admin/product/${id}`, {
+        let result = await fetch(`https://blogs-site-f4ki.onrender.com/admin/product/${id}`, {
             method: "delete",
             headers: { 'content-type': 'application/json' }
         })

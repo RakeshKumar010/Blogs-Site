@@ -28,7 +28,7 @@ const Home = () => {
         getFun()
     }, [])
     const getFun = async () => {
-        let result = await fetch('http://localhost:5000', {
+        let result = await fetch('https://blogs-site-f4ki.onrender.com', {
             method: 'get',
             headers: { 'content-type': 'application/json' },
 
@@ -52,7 +52,7 @@ const Home = () => {
     }
     const searchFun = async (e) => {
         const key = e.target.value;
-        let result = await fetch(`http://localhost:5000/search/${key}`, {
+        let result = await fetch(`https://blogs-site-f4ki.onrender.com/search/${key}`, {
             method: 'get',
             headers: { 'content-type': 'application/json' }
 

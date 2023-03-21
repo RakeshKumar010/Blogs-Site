@@ -19,7 +19,7 @@ const Admin = () => {
     }
     const submitFun = async(e) => {
         e.preventDefault()
-        let result = await fetch('http://localhost:5000/admin',{
+        let result = await fetch('https://blogs-site-f4ki.onrender.com/admin',{
             method:'post',
             headers:{'content-type':'application/json'},
             body:JSON.stringify(val)

@@ -11,7 +11,7 @@ const Updateproduct = () => {
         getData()
     },[])
     const getData = async()=>{
-        let result = await fetch(`http://localhost:5000/admin/updateProduct/${params.id}`)
+        let result = await fetch(`https://blogs-site-f4ki.onrender.com/admin/updateProduct/${params.id}`)
         result = await result.json()
         setTopic(result.topic)
         setHeader(result.header)
@@ -29,7 +29,7 @@ const Updateproduct = () => {
     }
     const submintFun = async(e) => {
         e.preventDefault()
-        let result = await fetch(`http://localhost:5000/admin/updateProduct/${params.id}`,{
+        let result = await fetch(`https://blogs-site-f4ki.onrender.com/admin/updateProduct/${params.id}`,{
             method:'put',
             headers:{'content-type':'application/json'},
             body:JSON.stringify({topic,header,content})

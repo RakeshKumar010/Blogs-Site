@@ -9,7 +9,7 @@ const Header = () => {
     const [content, setContent] = useState()
 
     const getData = async () => {
-        let result = await fetch(`http://localhost:5000/header/${params.id}`)
+        let result = await fetch(`https://blogs-site-f4ki.onrender.com/header/${params.id}`)
         result = await result.json()
        
         setHeader(result.header)

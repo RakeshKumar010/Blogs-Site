@@ -20,7 +20,7 @@ const Signup = () => {
     }
     const submitFun = async (e) => {
         e.preventDefault()
-        let result = await fetch('http://localhost:5000/admin/signup', {
+        let result = await fetch('https://blogs-site-f4ki.onrender.com/admin/signup', {
             method: 'post',
             headers: { 'content-type': 'application/json' },
             body:JSON.stringify(val)
