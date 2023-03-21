@@ -40,7 +40,7 @@ const Home = () => {
         //newarr
 
         const uniqueArray = result.reduce((accumulator, current) => {
-            const duplicate = accumulator.find(item => item.topic == current.topic);
+            const duplicate = accumulator.find(item => item.topic === current.topic);
             if (!duplicate) {
                 return [...accumulator, current];
             }
@@ -69,49 +69,51 @@ const Home = () => {
             </div>
             {newArr && newArr.map((value) => {
                 return (<>
-                       
+
 
                     <p className='paraTopic'>{value.topic}</p>
-                  
+
                 </>)
 
             })}
             <input type="text" placeholder='Search...' className='search-input' onChange={searchFun} />
         </div>
-        <div className="sideBar" id='sideBarId'>
-            {
-                headerval && headerval.map((value) => {
-                    return (
-                        <Link to={`/header/${value._id}`} className='inner2Div' key={value._id}>
-
-                            <p>{value.header}</p>
-
-                        </Link>
-                    )
-                })
-            }
-        </div>
-        <div>
-
-
-
-            <div className='homeDiv' >
-
+        <div className="mainhomeandside">
+            <div className="sideBar" id='sideBarId'>
                 {
-                    val && val.map((value) => {
+                    headerval && headerval.map((value) => {
                         return (
                             <Link to={`/header/${value._id}`} className='inner2Div' key={value._id}>
-                            <div className='innerDiv' key={value._id}>
 
-                                <h1>{value.header}</h1>
-                                <p className='homePara'>{value.content}</p>
+                                <p>{value.header}</p>
 
-                            </div>
                             </Link>
                         )
                     })
                 }
             </div>
+           
+
+
+
+                <div className='homeDiv' >
+
+                    {
+                        val && val.map((value) => {
+                            return (
+                                <Link to={`/header/${value._id}`} className='inner2Div' key={value._id}>
+                                    <div className='innerDiv' key={value._id}>
+
+                                        <h1>{value.header}</h1>
+                                        <p className='homePara'>{value.content}</p>
+
+                                    </div>
+                                </Link>
+                            )
+                        })
+                    }
+                </div>
+           
         </div>
 
     </>

@@ -7,18 +7,20 @@ const Header = () => {
    
     const [header, setHeader] = useState()
     const [content, setContent] = useState()
-
-    const getData = async () => {
-        let result = await fetch(`https://blogs-site-f4ki.onrender.com/header/${params.id}`)
-        result = await result.json()
-       
-        setHeader(result.header)
-        setContent(result.content)
-
-    }
     useEffect(() => {
+        async function getData() {
+            let result = await fetch(`https://blogs-site-f4ki.onrender.com/header/${params.id}`)
+            result = await result.json()
+           
+            setHeader(result.header)
+            setContent(result.content)
+    
+        }
         getData()
-    }, [])
+    }, [params.id])
+  
+
+    
     return (
         <div className='headerDiv'>
             <div className='headerinnerDiv innerDiv' >

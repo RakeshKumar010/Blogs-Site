@@ -2,22 +2,33 @@ import React, { useEffect, useState } from 'react'
 import {  useNavigate, useParams } from 'react-router'
 
 const Updateproduct = () => {
-    const navigate = useNavigate()
     const params = useParams()
+
+    const navigate = useNavigate()
     const[topic,setTopic]=useState()
     const[header,setHeader]=useState()
     const[content,setContent]=useState()
-    useEffect(()=>{
-        getData()
-    },[])
-    const getData = async()=>{
-        let result = await fetch(`https://blogs-site-f4ki.onrender.com/admin/updateProduct/${params.id}`)
-        result = await result.json()
-        setTopic(result.topic)
-        setHeader(result.header)
-        setContent(result.content)
+    
+    // const getData = async()=>{
+    //     let result = await fetch(`https://blogs-site-f4ki.onrender.com/admin/updateProduct/${params.id}`)
+    //     result = await result.json()
+    //     setTopic(result.topic)
+    //     setHeader(result.header)
+    //     setContent(result.content)
        
-    }
+    // }
+    useEffect(()=>{
+        
+        async function getData(){
+            let result = await fetch(`https://blogs-site-f4ki.onrender.com/admin/updateProduct/${params.id}`)
+            result = await result.json()
+            setTopic(result.topic)
+            setHeader(result.header)
+            setContent(result.content)
+           
+        }
+        getData()
+    },[params.id])
     const change1Fun = (e) => {
         setTopic(e.target.value)
     }
