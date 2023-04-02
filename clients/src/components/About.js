@@ -1,15 +1,28 @@
-import React from 'react'
-
+import React from "react";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const About = () => {
   return (
-    <div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus sit dolore nobis voluptate sint eos facere, veniam tenetur earum asperiores vitae, soluta eius minus, autem impedit. Impedit quisquam deserunt repudiandae.
-        Incidunt, fugiat quos. Quos quis, commodi atque quasi sunt nemo quo, consequatur quae dicta hic ipsam obcaecati fuga ut inventore soluta voluptas aspernatur tenetur aperiam quod officia sit a. Fuga?
-        Dolor nulla quae accusantium quibusdam rerum ex quisquam dolores porro, maxime asperiores vel, quia eveniet eius minima eum illo autem hic. Temporibus ducimus dolorem harum esse tempore. Animi, autem alias!
-        Iure, quidem culpa libero quae quo laboriosam obcaecati? Perspiciatis amet distinctio corporis! Sunt molestias aut quasi tempora laborum optio repellendus in cumque asperiores consectetur, nam enim. Temporibus earum ducimus nisi!
-        Ex aut quo commodi? Explicabo possimus enim perferendis veniam autem incidunt ullam, ipsa, magni tempora, ad accusantium. Adipisci ratione architecto explicabo optio numquam quis dolores delectus, qui dolorum, illum suscipit.</p>
+    <div className="aboutMain">
+      <div className="about">
+        <h1 className="aboutH1">About</h1>
+        <p className="aboutPara">
+          Hi, Welcome 👋 <br /> Bolgs Site is an platform where world Viewed
+          your Blog, Some Blog deserves world attention so therefore we
+          came up with Blogs-Site where you can read and publish your own
+          Blogs
+        </p>
+        <a
+          href="https://www.linkedin.com/in/rakesh-kumar-146238220/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="linkedAbout"
+        >
+          Follow On LinkedIn
+          <LinkedInIcon />
+        </a>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

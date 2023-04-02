@@ -141,6 +141,42 @@ a:hover {
   gap: 2rem;
 }
 
+.aboutMain {
+  display: flex;
+  justify-content: center;
+}
+.about {
+  width: 70vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 2px solid black;
+  padding: 2rem;
+  /* font-family: system-ui; */
+  margin: 3rem;
+}
+.aboutH1::first-letter {
+  font-size: 5rem;
+  color: rgb(44, 184, 210);
+  margin-right: 5px;
+}
+.linkedAbout,
+.socialmediaLink,
+.addstoryfooter {
+  text-decoration: none;
+  padding: 15px 2rem;
+  font-size: larger;
+  font-weight: bolder;
+  background-color: rgb(44, 184, 210);
+  color: white;
+  border-radius: 10px;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 .headerinnerDiv {
   margin: 2rem;
   width: 90vw;
