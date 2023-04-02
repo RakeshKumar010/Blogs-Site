@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
-
+  font-family: "Courier New", Courier, monospace;
 }
 
 .navUl {
@@ -16,16 +15,18 @@
   padding: 2rem;
   align-items: center;
   width: 100%;
-  background: rgb(152,10,144);
-background: linear-gradient(229deg, rgb(187, 96, 182) 39%, lightslategrey 100%);
+  background: rgb(152, 10, 144);
+  background: linear-gradient(
+    229deg,
+    rgb(187, 96, 182) 39%,
+    lightslategrey 100%
+  );
 }
 
 .navUl a,
 .logoutBtn {
   text-decoration: none;
   padding: 10px;
-
-
 
   border: 2px solid white;
   color: wheat;
@@ -34,14 +35,14 @@ background: linear-gradient(229deg, rgb(187, 96, 182) 39%, lightslategrey 100%);
   box-shadow: 1px 1px 8px black inset;
   border-radius: 100px;
 }
-a:hover{
+a:hover {
   background-color: green;
 }
-.logoutBtn:hover{
+.logoutBtn:hover {
   background-color: rgb(182, 12, 12);
 }
-.loginForm button:hover{
-  background-color: green
+.loginForm button:hover {
+  background-color: green;
 }
 
 .inner2Div {
@@ -49,18 +50,16 @@ a:hover{
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
-.inner2Div:hover{
+.inner2Div:hover {
   background-color: transparent;
 }
 
 #navLine {
-
   display: none;
   border: 2px solid wheat;
 }
 
 #navCrose {
-
   display: none;
   border: 2px solid wheat;
 }
@@ -93,7 +92,6 @@ a:hover{
   /* font-size: 1.5vw; */
   color: white;
 
-
   margin: 1rem;
 }
 
@@ -103,18 +101,13 @@ a:hover{
 }
 
 .headerDiv {
-
-
-
   display: flex;
 
   justify-content: center;
   text-align: center;
-
 }
 
 .search-input {
-
   padding: 10px;
 
   right: 0;
@@ -138,7 +131,8 @@ a:hover{
   /* width:90vw; */
   display: flex;
   flex-direction: column-reverse;
- /* margin-left: 1rem; */
+  justify-content: flex-end;
+  /* margin-left: 1rem; */
   /* overflow: hidden auto; */
   align-items: center;
   /* flex-wrap: wrap-reverse; */
@@ -153,10 +147,7 @@ a:hover{
   box-shadow: 1px 1px 15px black;
   border: 2px solid white;
 
-
   min-height: 1vh;
-
-
 
   padding: 2rem;
 
@@ -166,7 +157,6 @@ a:hover{
   gap: 1rem;
   background-color: lightslategrey;
   border-radius: 10px;
-
 }
 
 .innerDiv {
@@ -176,8 +166,6 @@ a:hover{
   width: 75vw;
   min-height: 1vh;
 
-
-
   padding: 2rem;
 
   display: flex;
@@ -186,8 +174,6 @@ a:hover{
   gap: 1rem;
   background-color: lightslategrey;
   border-radius: 10px;
-
-
 }
 
 .innerDiv h1 {
@@ -199,14 +185,11 @@ a:hover{
   overflow: hidden;
 }
 
-
 .loginDiv {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 80vh;
-
-
 }
 
 .loginForm {
@@ -231,13 +214,11 @@ a:hover{
   box-shadow: 1px 1px 8px black;
   border: 3px solid rgb(9, 60, 77);
   padding: 1vh;
-
 }
-.mainhomeandside{
+.mainhomeandside {
   display: flex;
   gap: 1rem;
   width: 100%;
-
 }
 .loginForm div {
   display: flex;
@@ -254,7 +235,6 @@ a:hover{
   box-shadow: 1px 1px 8px black;
 
   font-size: medium;
-
 }
 
 .signUplink {
@@ -264,29 +244,24 @@ a:hover{
   padding: 5px 1rem;
   box-shadow: 1px 1px 8px black;
   text-decoration: none;
-
-
-
 }
 
 .logo {
-  
   border: 5px solid blanchedalmond;
   box-shadow: 1px 1px 8px black;
   border-radius: 100px;
   width: 3.5rem;
 }
-#linkLogo{
+#linkLogo {
   position: absolute;
   left: 3rem;
-  width:60px;
+  width: 60px;
   height: 60px;
   border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 8px black;
-
 }
 .icon {
   display: flex;
@@ -294,8 +269,8 @@ a:hover{
 
   width: 10vw;
 }
-.icon2link:hover{
-  background-color:transparent;
+.icon2link:hover {
+  background-color: transparent;
   color: greenyellow;
 }
 .icon a {
@@ -315,70 +290,60 @@ a:hover{
 
 @media screen and (max-width: 1160px) {
   .sideBar {
-      display: none;
-      overflow: hidden auto;
-      position: absolute;
-      width: 37vw;
-      height: 50vh;
-      box-shadow: 1px 1px 8px black inset;
+    display: none;
+    overflow: hidden auto;
+    position: absolute;
+    width: 37vw;
+    height: 50vh;
+    box-shadow: 1px 1px 8px black inset;
 
-      background-color: rgba(105, 149, 177, 0.877);
+    background-color: rgba(105, 149, 177, 0.877);
   }
 
   .homeDiv {
-      width: 100%;
-  }
-
-  .innerDiv {
-      width: 99vw;
-  }
-
-  #navLine {
-      display: block;
-  }
-
-  .paraTopic {
-      display: none;
-  }
-
-  
- 
-
-
-}
-
-@media screen and (max-width: 540px) {
-  
-  .navUl a,
-  .logoutBtn {
-      font-size: small;
-  }
-  .logo{
-      left: 1rem;
-      width: 3rem;
-  }
-  .loginForm{
-      width: 90vw;
-  }
-  .sideBar{
-      width: 100vw;
-  }
-  #linkLogo{
-    position: static;
-  }
-  .navUl{
-    padding: 1rem 0;
-    gap:1rem;
-    justify-content: space-around;
-    
-  }
-
-  
-}
-
-@media screen and (max-width: 360px) {
-  .navUl{
     width: 100%;
   }
 
+  .innerDiv {
+    width: 99vw;
+  }
+
+  #navLine {
+    display: block;
+  }
+
+  .paraTopic {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .navUl a,
+  .logoutBtn {
+    font-size: small;
+  }
+  .logo {
+    left: 1rem;
+    width: 3rem;
+  }
+  .loginForm {
+    width: 90vw;
+  }
+  .sideBar {
+    width: 100vw;
+  }
+  #linkLogo {
+    position: static;
+  }
+  .navUl {
+    padding: 1rem 0;
+    gap: 1rem;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .navUl {
+    width: 100%;
+  }
 }

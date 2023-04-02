@@ -102,7 +102,7 @@ const Home = () => {
                         val && val.map((value) => {
                             return (
                                 <Link to={`/header/${value._id}`} className='inner2Div' key={value._id}>
-                                    <div className='innerDiv' key={value._id}>
+                                    <div className='innerDiv' key={value._id}  id='innerDivId'>
 
                                         <h1>{value.header}</h1>
                                         <p className='homePara'>{value.content}</p>
