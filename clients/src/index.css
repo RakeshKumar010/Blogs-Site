@@ -325,6 +325,12 @@ a:hover {
 }
 
 @media screen and (max-width: 1160px) {
+  .about {
+    width: 90%;
+  }
+  .linkedAbout {
+    width: 100%;
+  }
   .sideBar {
     display: none;
     overflow: hidden auto;
